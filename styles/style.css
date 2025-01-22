@@ -156,7 +156,7 @@ ol {
 
 .search-form__label:focus-within:has(.search-form__checkbox) {
   outline: 1px solid #fff;
-  outline-offset: 1px; 
+  outline-offset: 1px;
 }
 
 .search-form__checkbox-list {
