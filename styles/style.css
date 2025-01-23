@@ -19,7 +19,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 800px;
+  padding: 133px 30px;
 }
 
 h1,
@@ -82,9 +82,9 @@ ol {
 }
 
 .result__video-container {
-  width: 711px;
-  height: 386px;
-  margin-bottom: 16px;
+  inline-size: 711px;
+  block-size: 386px;
+  margin-block-end: 16px;
   position: relative;
 }
 
@@ -135,7 +135,7 @@ ol {
   outline: none;
 }
 
-.search-form__textfield:focus-visible {
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
@@ -148,15 +148,6 @@ ol {
 
 .search-form__label:hover:has(.search-form__checkbox) {
   text-decoration: underline;
-}
-
-.search-form__label:focus {
-  outline: none;
-}
-
-.search-form__label:focus-within:has(.search-form__checkbox) {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
 }
 
 .search-form__checkbox-list {
@@ -193,7 +184,7 @@ ol {
   color: #fff;
   border: 1px solid #fff;
   width: 100%;
-  height: 34px;
+  min-height: 34px;
   cursor: pointer;
 }
 
@@ -237,7 +228,6 @@ ol {
   font-weight: 700;
   line-height: 70.5px;
   text-transform: uppercase;
-  height: 210px;
 }
 
 .content__accent {
@@ -265,28 +255,33 @@ ol {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+  display: block;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
 }
 
 .content__video-card {
   display: flex;
   justify-content: space-between;
   height: 103px;
-}
-
-.content__video-card:active {
-  background-color: #545050;
-}
-
-.content__video-card:hover {
-  text-decoration: underline;
-}
-
-.content__video-card:focus {
-  outline: none;
-}
-
-.content__video-card:focus-visible {
-  outline: 1px solid #fff;
 }
 
 .content__video-card-description-container {
@@ -310,11 +305,11 @@ ol {
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
-  max-height: calc(16.2px * 3);
+  max-height: calc(16.2px * 4);
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
 }
 
 .content__video-card-thumbnail {
